@@ -67,7 +67,7 @@ TotalRender_df["duration"] = TotalRender_df.apply(lambda x: abs(dt.combine(date.
 Uploading_df["duration"] = Uploading_df.apply(lambda x: abs(dt.combine(date.today(), x['START']) - dt.combine(date.today(), x['STOP'])), axis=1)
 
 full_df = pd.concat([render_df, save_conf_df, tiling_df, TotalRender_df, Uploading_df], axis=0)
-full_df['duration'] = (full_df['duration'].dt.total_seconds()/3600).round(2)
+full_df['duration'] = (full_df['duration'].dt.total_seconds())
 full_df.to_csv("./data/processed_app_conf.csv")
 
 render_time = render_df['duration'].sum()
@@ -77,18 +77,32 @@ TotalRender_time = TotalRender_df['duration'].sum()
 Uploading_time = Uploading_df['duration'].sum()
 
 eventName = app_check['eventName'].unique()
-total_duration = [render_time, save_conf_time, tiling_time, TotalRender_time, Uploading_time]
+total_duration = [tiling_time, save_conf_time, render_time, TotalRender_time, Uploading_time]
 duration_df = pd.DataFrame({'eventName': eventName, 'totalDuration': total_duration})
 duration_df['totalDuration'] = (duration_df['totalDuration'].dt.total_seconds()/3600).round(3)
 
 duration_df.to_csv("./data/event-total-duration.csv")
-
-
 
 app_check_dd = dd.read_csv('./data/processed_app_conf.csv')
 gpu_dd = dd.read_csv('./data/gpu.csv')
 app_gpu = dd.merge(app_check_dd, gpu_dd, on='hostname')
 app_gpu.to_csv("./data/app_gpu.csv", index=False, single_file=True)
 
+app_gpu = dd.read_csv("./data/app_gpu.csv")
+task_xy_dd = dd.read_csv("./data/task-x-y.csv")
+app_gpu_task = dd.merge(app_gpu, task_xy_dd, on='taskId')
+del app_gpu_task['jobId_x']
+app_gpu_task = app_gpu_task.rename(columns={'jobId_y': 'jobId'})
 
+data = app_gpu_task[['x', 'y', 'powerDrawWatt']]
+data = data.groupby(['x', 'y']).mean()
+data = data.reset_index()
+data_pd = data.compute()
+pivot_table = data_pd.pivot('x', 'y','powerDrawWatt')
 
+# data = app_gpu_task[['x', 'y', 'powerDrawWatt']]
+# data_pvt = data.pivot_table("x", "y", "powerDrawWatt")
+ax = sns.heatmap(pivot_table)
+ax.invert_yaxis()
+plt.show()
+app_gpu_task.to_csv('./data/app_gpu_task.csv', index=False, single_file=True)
