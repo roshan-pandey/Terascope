@@ -1,3 +1,9 @@
+commit 687d09c37126a50b09f24c17c1885337cdb0067d
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Thu Jan 20 16:22:46 2022 +0000
+
+    Updated README and added requirements.txt
+
 commit da6373d3e2c9d2c42eeb06ad3d310a8679058873
 Author: roshan-pandey <roshanpandey330@gmail.com>
 Date:   Thu Jan 20 16:17:29 2022 +0000
