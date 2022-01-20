@@ -1,0 +1,71 @@
+commit a3ab6a12423f4d85dcb754eca1f8a5d1fa64767d
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Mon Jan 17 18:40:03 2022 +0000
+
+    Added annotations to data manipulation file and some plot descriptions in the notebook
+
+commit 5e13ae0d93a0d7c4d7f99b39733a50515bd6586b
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Mon Jan 17 00:48:03 2022 +0000
+
+    added pdf report
+
+commit 09887173da618189c3510826306b3edadd9994a1
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Sun Jan 16 19:37:02 2022 +0000
+
+    Added references in the notebook
+
+commit 9d341d7b59435b8039b151759e70e7da74b659b0
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Sun Jan 16 18:09:35 2022 +0000
+
+    Added description for all the plots and presented all the key findings
+
+commit bfe63a044b18e3fecf1df8ff84e866738b9c169f
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Sat Jan 15 18:15:59 2022 +0000
+
+    Added data description in the notebook
+
+commit 606d985dc59f18bfdc696854e5038b0f7da6faa3
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Fri Jan 14 18:12:23 2022 +0000
+
+    Added minor annotations
+
+commit 73f15be3c21990185b2bd1111e2a67c5ec880f8c
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Wed Jan 12 23:31:11 2022 +0000
+
+    Merged all the 3 files and analyzed render time based on power draw
+
+commit 305b13b102608f6918915565ef272371336d0803
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Tue Jan 11 23:16:00 2022 +0000
+
+    analyzed gpu performance based on thier serial numbers
+
+commit cd6373fbd6b8965dafcd948ab5886d8ade48c5d4
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Fri Jan 7 00:52:51 2022 +0000
+
+    merged application checkpoint and gpu data based on hostname
+
+commit 6e792dfa5c0e579326b8fa2984ef2e4b2faeb5d7
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Thu Jan 6 13:10:02 2022 +0000
+
+    plot for total time taken by each event
+
+commit 2942782fd3907e9c972e55b98ede6c4409ae2438
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Wed Jan 5 15:43:58 2022 +0000
+
+    analysed which task is taking most of the processing time
+
+commit faeaeb69ff2aa438720859cda95ccd95f6a39a9d
+Author: roshan-pandey <roshanpandey330@gmail.com>
+Date:   Thu Dec 23 12:29:26 2021 +0000
+
+    initial commit
