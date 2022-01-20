@@ -35,6 +35,7 @@ There are three pdf report files:
 1. EDA_Notebook_pdf_version.pdf: This file is generated via jypyter notebook, it contains all the analysis.
 2. CSC8634_Roshan_Pandey_210113925.pdf: This report was created in MS Word, it contains all the work done and results from this analysis.
 3. CSC8634_Roshan_Pandey_Abstract_Report.pdf: This file contains the structured abstract (Context, Objective, Method, Results, Novelty).
+4. Git log file can be found in the root directory of the project. ./CSC8634_210113925_gitLog.txt
 
 ## 5. Important Consideration
 This project runs perfectly fine on windows machine by following the steps mentioned in section 3. If want to run on different OS, encoding might needs to be changed for text processing.
